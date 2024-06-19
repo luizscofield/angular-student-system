@@ -9,12 +9,17 @@ import { StudentFormComponent } from './studentForm/studentForm.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentDetailsComponent } from './studentDetails/studentDetails.component';
+import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    StudentListComponent, // Add StudentListComponent here
+    StudentListComponent,
     StudentFormComponent, 
     StudentDetailsComponent
   ],
@@ -22,7 +27,11 @@ import { StudentDetailsComponent } from './studentDetails/studentDetails.compone
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule,
+    MatDividerModule,
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

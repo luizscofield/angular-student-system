@@ -1,21 +1,11 @@
-.example-spacer {
-  flex: 1 1 auto;
-}
+.action-buttons {
 
-.container {
-  padding-top: 20px;
-  margin: 0 auto;
-  max-width: 1348px;
-  mat-form-field {
-    width: 100%;
-  }
-}
+text-align: center;
 
-.action {
-  display: flex;
-  gap: 5px;
-}
-
-button {
-  margin-right: 10px;
+border-radius: 25px;
+cursor: pointer;
+font-weight: bold;
+display: flex;
+justify-content: start;
+gap: 10px;
 }

@@ -1,4 +1,3 @@
-// src/app/app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { StudentListComponent } from './studentList/studentList.component';
@@ -12,7 +11,7 @@ const routes: Routes = [
   { path: 'add', component: StudentFormComponent },
   { path: 'edit/:id', component: StudentFormComponent },
   { path: 'details/:id', component: StudentDetailsComponent },
-  { path: '**', redirectTo: '' } // Handle invalid routes by redirecting to home
+  { path: '**', redirectTo: '' } 
 ];
 
 @NgModule({

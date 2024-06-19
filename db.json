@@ -2,7 +2,7 @@
   "students": [
     {
       "id": "79c2",
-      "name": "Luiz",
+      "name": "Luiz Scofield",
       "email": "luiz@gmail.com",
       "phone": "99999999999"
     },
@@ -11,6 +11,12 @@
       "name": "João Victor Sena",
       "email": "sena@gmail.com",
       "phone": "99999999999"
+    },
+    {
+      "id": "6d7f",
+      "name": "tawan",
+      "email": "@gmail",
+      "phone": "222"
     }
   ]
 }

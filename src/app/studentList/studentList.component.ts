@@ -1,4 +1,3 @@
-// src/app/student-list/student-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StudentService } from '../student.service';
@@ -10,6 +9,7 @@ import { StudentService } from '../student.service';
 })
 export class StudentListComponent implements OnInit {
   students: any[] = [];
+  columns: Array<string> = ["Id", "Nome", "Email", "Ações"];
 
   constructor(
     private router: Router,
@@ -39,7 +39,7 @@ export class StudentListComponent implements OnInit {
     if (confirm('Are you sure you want to delete this student?')) {
       this.studentService.deleteStudent(id).subscribe(
         () => {
-          this.loadStudents(); // Reload students after deletion
+          this.loadStudents();
         },
         error => {
           console.error('Error deleting student:', error);
@@ -53,6 +53,6 @@ export class StudentListComponent implements OnInit {
   }
 
   goToHome(): void {
-    this.router.navigate(['/']); // Navigate to the home page
+    this.router.navigate(['/']);
   }
 }
