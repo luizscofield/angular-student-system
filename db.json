@@ -1,3 +1,16 @@
 {
-  "users": []
+  "students": [
+    {
+      "id": "79c2",
+      "name": "Luiz",
+      "email": "luiz@gmail.com",
+      "phone": "99999999999"
+    },
+    {
+      "id": "f6c9",
+      "name": "João Victor Sena",
+      "email": "sena@gmail.com",
+      "phone": "99999999999"
+    }
+  ]
 }
