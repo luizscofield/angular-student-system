@@ -6,7 +6,7 @@ Foi utilizado angular como linguagem para o projeto, JSON server para simular um
 
 ## Servidor de desenvolvimento
 
-Use o comando `ng serve` para executar a aplicação localmente. Acesse a URL `http://localhost:4200/` no seu navegador para intereagir com o sistema.
+Use o comando `ng serve` para executar a aplicação localmente. Acesse a URL `http://localhost:4200/` no seu navegador para interagir com o sistema.
 
 ## JSON Server
 
