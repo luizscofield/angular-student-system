@@ -1,16 +1,12 @@
 {
   "students": [
     {
-      "id": "79c2",
-      "name": "Luiz Scofield",
+      "id": "db72",
+      "name": "Luiz",
       "email": "luiz@gmail.com",
-      "phone": "99999999999"
-    },
-    {
-      "id": "f6c9",
-      "name": "João Victor Sena",
-      "email": "sena@gmail.com",
-      "phone": "99999999999"
+      "phone": "99999999999",
+      "course": "Sistemas de Informação",
+      "age": "21"
     }
   ]
 }

@@ -1,20 +1,22 @@
 <div *ngIf="student">
   <h2>Detalhes do aluno</h2>
   <br />
-  <div class="row">
+  <div class="list-group">
     <mat-list>
       <mat-divider></mat-divider>
       <br />
-      <mat-list-item>Nome: {{ student.name }}</mat-list-item>
-      <br />
-      <mat-divider></mat-divider>
-      <br />
-      <mat-list-item>Email: {{ student.email }}</mat-list-item>
-      <br />
-      <mat-divider></mat-divider>
-      <br />
-      <mat-list-item>Telefone: {{ student.phone }}</mat-list-item>
-      <br />
+
+      <mat-list-item class="list-group-item">Nome: {{ student.name }}</mat-list-item>
+
+      <mat-list-item class="list-group-item">Email: {{ student.email }}</mat-list-item>
+
+      <mat-list-item class="list-group-item">Telefone: {{ student.phone }}</mat-list-item>
+
+      <mat-list-item class="list-group-item">Curso: {{ student.course }}</mat-list-item>
+
+      <mat-list-item class="list-group-item">Idade: {{ student.age }}</mat-list-item>
+      
+      <br >
       <mat-divider></mat-divider>
     </mat-list>  
   </div>

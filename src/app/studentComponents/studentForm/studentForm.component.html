@@ -2,15 +2,27 @@
   <div class="form-group">
     <label for="name">Nome</label>
     <input type="text" class="form-control" id="name" name="name" [(ngModel)]="student.name" required>
-    <div *ngIf="nomeInvalid" class="text-danger">O campo Nome é obrigatório.</div>
+    <div *ngIf="nomeInvalid && !student.name" class="text-danger">O campo Nome é obrigatório.</div>
   </div>
   <div class="form-group">
     <label for="email">Email</label>
     <input type="email" class="form-control" id="email" name="email" [(ngModel)]="student.email" required>
+    <div *ngIf="nomeInvalid && !student.email" class="text-danger">O campo Email é obrigatório.</div>
   </div>
   <div class="form-group">
     <label for="phone">Telefone</label>
     <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="student.phone" required>
+    <div *ngIf="nomeInvalid && !student.phone" class="text-danger">O campo Telefone é obrigatório.</div>
+  </div>
+  <div class="form-group">
+    <label for="course">Curso</label>
+    <input type="text" class="form-control" id="course" name="course" [(ngModel)]="student.course" required>
+    <div *ngIf="nomeInvalid && !student.course" class="text-danger">O campo Curso é obrigatório.</div>
+  </div>
+  <div class="form-group">
+    <label for="age">Idade</label>
+    <input type="text" class="form-control" id="age" name="age" [(ngModel)]="student.age" required>
+    <div *ngIf="nomeInvalid && !student.age" class="text-danger">O campo Idade é obrigatório.</div>
   </div>
   <br />
   <div class="buttons">

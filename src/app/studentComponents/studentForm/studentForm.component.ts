@@ -31,7 +31,11 @@ export class StudentFormComponent implements OnInit {
   }
 
   saveStudent(): void {
-    if (!this.student.name || this.student.name.trim() === '') {
+    if (!this.student.name || this.student.name.trim() === '' ||
+        !this.student.email || this.student.email.trim() === '' ||
+        !this.student.phone || this.student.phone.trim() === '' ||
+        !this.student.course || this.student.course.trim() === '' ||
+        !this.student.age || this.student.age.trim() === '') {
       this.nomeInvalid = true;
       return;
     }
