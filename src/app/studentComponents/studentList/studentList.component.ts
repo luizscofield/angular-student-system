@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
-import { StudentService } from '../student.service';
+import { StudentService } from '../../studentService/student.service';
 
 @Component({
   selector: 'app-student-list',
@@ -10,6 +10,11 @@ import { StudentService } from '../student.service';
 export class StudentListComponent implements OnInit {
   students: any[] = [];
   columns: Array<string> = ["Id", "Nome", "Email", "Ações"];
+
+  @ViewChild('confirmationModal') confirmationModal!: ElementRef;
+
+  private modalInstance: any;
+  studentToDelete: any;
 
   constructor(
     private router: Router,
@@ -35,16 +40,36 @@ export class StudentListComponent implements OnInit {
     this.router.navigate(['/edit', id]);
   }
 
-  deleteStudent(id: string): void {
-    if (confirm('Are you sure you want to delete this student?')) {
+  deleteConfirmed() {
+    if (this.studentToDelete) {
+      const id = this.studentToDelete.id;
       this.studentService.deleteStudent(id).subscribe(
         () => {
           this.loadStudents();
+          this.closeModal();
         },
         error => {
           console.error('Error deleting student:', error);
         }
       );
+    }
+  }
+
+  confirmDeleteStudent(student: any) {
+    this.studentToDelete = student;
+    this.openModal();
+  }
+
+  openModal() {
+    if (this.confirmationModal) {
+      this.modalInstance = new (window as any).bootstrap.Modal(this.confirmationModal.nativeElement);
+      this.modalInstance.show();
+    }
+  }
+  
+  closeModal() {
+    if (this.modalInstance) {
+      this.modalInstance.hide();
     }
   }
 

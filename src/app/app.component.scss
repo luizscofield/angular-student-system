@@ -1,7 +1,8 @@
-.header {
+.container {
   background-color: #f8f9fa;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 8px;
-  padding: 20px;
+  padding: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: space-evenly;
 }

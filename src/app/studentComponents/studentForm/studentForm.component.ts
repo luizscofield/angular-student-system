@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { StudentService } from '../student.service';
+import { StudentService } from '../../studentService/student.service';
 
 @Component({
   selector: 'app-student-form',
@@ -10,6 +10,7 @@ import { StudentService } from '../student.service';
 export class StudentFormComponent implements OnInit {
   student: any = {};
   isEditMode = false;
+  nomeInvalid = false;
 
   constructor(
     private router: Router,
@@ -30,6 +31,11 @@ export class StudentFormComponent implements OnInit {
   }
 
   saveStudent(): void {
+    if (!this.student.name || this.student.name.trim() === '') {
+      this.nomeInvalid = true;
+      return;
+    }
+
     if (this.isEditMode) {
       this.studentService.updateStudent(this.student).subscribe(() => {
         this.router.navigate(['/list']);
@@ -43,5 +49,9 @@ export class StudentFormComponent implements OnInit {
         console.error('Error adding student:', error);
       });
     }
+  }
+
+  cancel(): void {
+    this.router.navigate(['/list']);
   }
 }
